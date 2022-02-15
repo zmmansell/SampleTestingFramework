@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "SmokeTestSuite">
+    <parameter name="username" value="standard_user"/>
+    <parameter name="password" value="secret_sauce"/>
+    <test name="functionality-test">
+        <classes>
+            <class name="com.one.MainPageTest" />
+            <!--class name="com.one.AddToCardTest" /-->
+            <!--class name="com.one.NavigationTest" /-->
+        </classes>
+    </test>
+</suite>

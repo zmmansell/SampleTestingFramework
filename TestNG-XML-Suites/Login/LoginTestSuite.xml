@@ -1,0 +1,77 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "LoginTestSuite">
+    <test name = "LoginPage">
+        <groups>
+            <run>
+                <include name = "page_elements" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+    <test name = "LoginSmokeTest1">
+        <parameter name="username" value="standard_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <groups>
+            <run>
+                <include name = "valid" />
+                <include name = "logout" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+    <test name = "LoginSmokeTest2">
+        <parameter name="username" value="problem_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <groups>
+            <run>
+                <include name = "valid" />
+                <include name = "logout" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+    <test name = "LoginSmokeTestPerformanceIssues">
+        <parameter name="username" value="performance_glitch_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <groups>
+            <run>
+                <include name = "valid" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+    <test name = "LoginSmokeTestLockedUser">
+        <parameter name="username" value="locked_out_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <parameter name="message" value="Sorry, this user has been locked out."/>
+        <groups>
+            <run>
+                <include name = "lockedout" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+    <test name = "LoginSmokeTestWrongPassword">
+        <parameter name="username" value="standard_user"/>
+        <parameter name="password" value="secret-sauce"/>
+        <parameter name="message" value="Username and password do not match any user in this service"/>
+        <groups>
+            <run>
+                <include name = "invalid" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "com.one.LoginTest"/>
+        </classes>
+    </test>
+</suite>
