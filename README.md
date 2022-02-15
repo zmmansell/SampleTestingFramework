@@ -10,9 +10,10 @@ https://www.saucedemo.com/
 Run 'mvn clean install -DskipTests' to build the project 
 
 ## Run tests
-In target folder run: 
+In target folder run (for Windows): 
 
-java -cp PocForOneCom-1.0-SNAPSHOT-tests.jar;PocForOneCom-1.0-SNAPSHOT.jar;libs* -Dwebdriver.baseUrl=https://www.saucedemo.com/ -Dwebdriver.remote=false -Dwebdriver.capabilities.browserName=chrome org.testng.TestNG ../TestNG-XML-Suites/Login/LoginTestSuite.xml 
 
-java -cp PocForOneCom-1.0-SNAPSHOT-tests.jar;PocForOneCom-1.0-SNAPSHOT.jar;libs* -Dwebdriver.baseUrl=https://www.saucedemo.com/ -Dwebdriver.remote=false -Dwebdriver.capabilities.browserName=chrome org.testng.TestNG ../TestNG-XML-Suites/Smoke/SmokeTestSuite.xml
+java -cp PocForOneCom-1.0-SNAPSHOT-tests.jar;PocForOneCom-1.0-SNAPSHOT.jar;libs\* -Dwebdriver.baseUrl=https://www.saucedemo.com/ -Dwebdriver.remote=false -Dwebdriver.capabilities.browserName=chrome org.testng.TestNG ../TestNG-XML-Suites/Login/LoginTestSuite.xml
+
+java -cp PocForOneCom-1.0-SNAPSHOT-tests.jar;PocForOneCom-1.0-SNAPSHOT.jar;libs\* -Dwebdriver.baseUrl=https://www.saucedemo.com/ -Dwebdriver.remote=false -Dwebdriver.capabilities.browserName=chrome org.testng.TestNG ../TestNG-XML-Suites/Smoke/SmokeTestSuite.xml
 
