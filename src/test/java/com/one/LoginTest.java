@@ -50,7 +50,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     public void verifyLogin() {
         inventory = new Inventory(browser);
         assertTrue(inventory.isProductLabelPresent(), "Product label not displayed");
-        assertTrue(inventory.getProductLabel().matches("Products"));
+        assertTrue(inventory.getProductLabel().matches("PRODUCTS"));
     }
 
     @Test(groups = "logout")
@@ -58,8 +58,8 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
         header =  new Header(browser);
         menu = new Menu(browser);
         header.openMenu();
-        assertTrue(menu.isLogoutVisible(), "Logout link not visible");
         Reporter.log("Verify logout");
+        assertTrue(menu.isLogoutVisible(), "Logout link not visible");
         menu.clickLogout();
         assertTrue(loginForm.isLoginDisplayed(), "Login button not found after logout");
     }
